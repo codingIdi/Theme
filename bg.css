@@ -1,23 +1,25 @@
-body{
-    margin: 0%;
-    padding:0%;
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Arial';
 }
 
-i{
+i {
     font-size: 50px;
     cursor: pointer;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
 }
- 
-h1{
+
+h1 {
     text-align: center;
     font-size: 3rem;
 }
-i::after{
+
+i::after {
     content: "";
     position: absolute;
     left: 0;
@@ -27,36 +29,54 @@ i::after{
     background-color: #FFD700; /* Line color */
     border-radius: 1px; /* Optional: rounded edges */
     transition: width 0.3s ease;
-    
 }
-i:hover::after{
+
+i:hover::after {
     width: 100%;
 }
 
-p{
+p {
     position: relative;
     top: 40px;
 }
 
-
-/* For tablets */
-@media screen and (max-width: 768px) {
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
     i {
-        font-size: 40px; /* Smaller icon on tablets */
+        font-size: 40px; /* Smaller icon size for mobile */
     }
 
     h1 {
-        font-size: 3rem; /* Adjust h1 size */
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    p {
+        top: 20px; /* Adjust paragraph position on mobile */
     }
 }
 
-/* For mobile devices */
-@media screen and (max-width: 480px) {
+/* Tablet (601px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
     i {
-        font-size: 30px; /* Smaller icon for mobile */
+        font-size: 45px; /* Medium icon size for tablets */
     }
 
     h1 {
-        font-size: 2rem; /* Adjust h1 size */
+        font-size: 2.5rem; /* Medium heading for tablets */
+    }
+
+    p {
+        top: 30px; /* Adjust paragraph position on tablets */
+    }
+}
+
+/* Desktop and larger tablets (769px and up) */
+@media (min-width: 769px) {
+    i {
+        font-size: 50px; /* Larger icon for desktops and larger screens */
+    }
+
+    h1 {
+        font-size: 3rem; /* Larger heading for desktops */
     }
 }
