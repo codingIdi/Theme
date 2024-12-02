@@ -1,0 +1,39 @@
+body{
+    margin: 0%;
+    padding:0%;
+    font-family: 'Arial';
+}
+
+i{
+    font-size: 50px;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ 
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+i::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position line below the icon */
+    width: 0; /* Start with no width */
+    height: 2px; /* Line thickness */
+    background-color: #FFD700; /* Line color */
+    border-radius: 1px; /* Optional: rounded edges */
+    transition: width 0.3s ease;
+    
+}
+i:hover::after{
+    width: 100%;
+}
+
+p{
+    position: relative;
+    top: 40px;
+}
