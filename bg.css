@@ -37,3 +37,26 @@ p{
     position: relative;
     top: 40px;
 }
+
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+    i {
+        font-size: 40px; /* Smaller icon on tablets */
+    }
+
+    h1 {
+        font-size: 3rem; /* Adjust h1 size */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    i {
+        font-size: 30px; /* Smaller icon for mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust h1 size */
+    }
+}
